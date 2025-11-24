@@ -2,31 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-09/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-11/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/styles-K3-7BS2Z.css">
+    <title>Pixabay</title>
+    <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-Dj0z4On-.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-Dr4k8ETB.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-BcnpcqT6.css">
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-link {=$highlight-act}" href="./1-gallery.html"
-                >Gallery</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {=$highlight-curr}" href="./2-form.html"
-                >Form</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <header class="header"></header>
 
-    <main></main>
+    <main>
+      <div class="container">
+        <!-- form -->
+        <form class="form">
+          <label>
+            <input
+              type="text"
+              name="search-text"
+              placeholder="Search images..."
+              required
+            />
+          </label>
+          <button type="submit">Search</button>
+        </form>
+
+        <!-- loader -->
+        <div id="loader" class="loader hidden">
+          <div class="spinner"></div>
+        </div>
+
+        <!-- gallery -->
+        <ul class="gallery" id="gallery"></ul>
+
+        <!-- pixabay logo -->
+        <a href="https://pixabay.com/" target="_blank"
+          ><img
+            class="pixabay-logo"
+            src="/goit-js-hw-11/assets/pixabay-CqotO98l.png"
+            alt="pixabay logo"
+            width="100"
+        /></a>
+      </div>
+    </main>
+
   </body>
 </html>
