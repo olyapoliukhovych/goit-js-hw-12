@@ -3,7 +3,7 @@ import SimpleLightbox from 'simplelightbox';
 // Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-const galleryContainer = document.querySelector('.gallery');
+const mainGallery = document.querySelector('.gallery');
 const loaderEl = document.querySelector('.loader');
 
 const simpleLightbox = new SimpleLightbox('.gallery a', {
@@ -43,21 +43,21 @@ export function createGallery(images) {
     })
     .join('');
 
-  galleryContainer.insertAdjacentHTML('beforeend', markup);
+  mainGallery.insertAdjacentHTML('beforeend', markup);
 
   simpleLightbox.refresh();
 }
 
 export function clearGallery() {
-  galleryContainer.innerHTML = '';
+  mainGallery.innerHTML = '';
 }
 
 export function showLoader() {
-  if (!loaderEl) return;
+  // if (!loaderEl) return;
   loaderEl.classList.remove('hidden');
 }
 
 export function hideLoader() {
-  if (!loaderEl) return;
+  // if (!loaderEl) return;
   loaderEl.classList.add('hidden');
 }

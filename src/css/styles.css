@@ -97,13 +97,10 @@ button {
   flex-grow: 1;
 }
 
-.hidden {
-  display: none;
-}
-
 .loader {
   margin: 50px auto;
 
+  display: block;
   color: #ffd2cb;
   font-size: 10px;
   width: 1em;
@@ -113,6 +110,10 @@ button {
   text-indent: -9999em;
   animation: mulShdSpin 1.3s infinite linear;
   transform: translateZ(0);
+}
+
+.hidden {
+  display: none;
 }
 
 @keyframes mulShdSpin {
