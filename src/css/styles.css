@@ -194,8 +194,5 @@ button {
 }
 
 .icon {
-  display: inline-block;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+  fill: #fff;
 }

@@ -100,29 +100,20 @@ async function loadMoreBtnClickHandler() {
 
     createGallery(hits);
 
-    if (hits.length < 15) {
+    const loaded = document.querySelectorAll('.gallery a').length;
+
+    if (loaded >= totalHits) {
       hideLoadMoreButton();
       iziToast.info({
         title: '',
         message: "We're sorry, but you've reached the end of search results.",
         position: 'topRight',
+        closeOnClick: true,
+        closeOnEscape: true,
       });
     } else {
       showLoadMoreButton();
     }
-
-    // const loaded = document.querySelectorAll('.gallery a').length;
-
-    // if (loaded >= totalHits) {
-    //   hideLoadMoreButton();
-    //   iziToast.info({
-    //     title: '',
-    //     message: "We're sorry, but you've reached the end of search results.",
-    //     position: 'topRight',
-    //     closeOnClick: true,
-    //     closeOnEscape: true,
-    //   });
-    // }
 
     const firstGalleryCard = document.querySelector('.gallery a');
     if (firstGalleryCard) {
