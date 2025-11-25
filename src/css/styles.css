@@ -8,6 +8,10 @@
 @import url('./reset.css');
 @import url('./base.css');
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -97,7 +101,8 @@ button {
   flex-grow: 1;
 }
 
-.loader {
+.loader,
+.load-more-loader {
   margin: 50px auto;
 
   display: block;
@@ -110,6 +115,13 @@ button {
   text-indent: -9999em;
   animation: mulShdSpin 1.3s infinite linear;
   transform: translateZ(0);
+}
+
+.load-more-button {
+  margin: 20px auto 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {
@@ -165,4 +177,25 @@ button {
   &:focus {
     opacity: 80%;
   }
+}
+
+.svg-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  background-color: #ffd2cb;
+
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+}
+
+.icon {
+  display: inline-block;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
